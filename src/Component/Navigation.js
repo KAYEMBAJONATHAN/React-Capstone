@@ -2,7 +2,10 @@ import React from 'react';
 import '../Style/navigation.css';
 
 const Navigation = () => (
-  <h1>tyyer</h1>
+  <div>
+    <h1>Country</h1>
+
+  </div>
 );
 
 export default Navigation;
