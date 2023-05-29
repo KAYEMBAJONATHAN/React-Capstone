@@ -1,3 +1,71 @@
 * {
   margin: 0;
 }
+
+body {
+  background-color: #dc4680db;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dc4680;
+}
+
+.content {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: auto  auto;
+  gap: 2px;
+  margin-bottom: 200px;
+}
+
+.container {
+  background: #dc4680;
+}
+
+.info {
+  text-align: right;
+  margin: 140px 20px 0 0;
+}
+
+.info,
+.name,
+.population {
+  color: #fff;
+  font-size: 19px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.country-population {
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+.SearchCountry-Here {
+  width: 20%;
+  padding: 5px 6px;
+  outline: none;
+  font-size: 14px;
+  border-radius: 1px;
+  margin: 100px 0 15px 0;
+  border: 0;
+  transition: all 1s;
+}
+
+.mapOfThe-coutry {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+}
+
+.contryImg {
+  width: 50%;
+}
