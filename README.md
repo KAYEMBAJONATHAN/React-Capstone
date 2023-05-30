@@ -79,7 +79,9 @@ After you're finished please remove all the comments and instructions!
 - **[Styling css with colors, borders, paddings, margins & sizes, etc]**
   \_ **[React, Redux & javascript functions, modules, ES6 syntax, variables, React testing, etc]**
 
-## 🚀 Live Demo <a href="">Live Link</a>
+## 🚀 Live Demo <a href="https://capstone-slmm.onrender.com/">Live Link</a>
+
+## Live Recording demo <a href="https://drive.google.com/file/d/1-EGud0n5Dz4tW0CqRXy3xiwkJqNv5vR-/view">Recording demo</a>
 
 <!-- GETTING STARTED -->
 
