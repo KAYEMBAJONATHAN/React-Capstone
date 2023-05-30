@@ -20,7 +20,7 @@ export const fetchCountryData = createAsyncThunk('country/fetchData', async () =
 });
 
 const initialState = {
-  countryData: [],
+  TheCountryData: [],
   loading: false,
   error: null,
 };
@@ -36,7 +36,7 @@ const countrySlice = createSlice({
       })
       .addCase(fetchCountryData.fulfilled, (state, action) => {
         state.loading = false;
-        state.countryData = action.payload;
+        state.TheCountryData = action.payload;
       })
       .addCase(fetchCountryData.rejected, (state) => {
         state.loading = false;

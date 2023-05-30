@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import Home from './Component/Home';
 import { fetchCountryData } from './Redux/Country/countrySlice';
 import Details from './Component/Details';
+import Navigation from './Component/Navigation';
 
 function App() {
   const dispatch = useDispatch();
@@ -16,8 +17,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/countries/:fName" element={<Details />} />
+          <Route exact path="/" element={<Navigation />}>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/countries/:fName" element={<Details />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

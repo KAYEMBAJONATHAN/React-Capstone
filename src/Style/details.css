@@ -5,18 +5,18 @@
   box-sizing: border-box;
 }
 
+.status-bar,
 .details-container h2:nth-child(even) {
   width: 100%;
   height: auto;
   background: #dc4680;
 }
 
-.heading-text {
+.header-text {
   text-align: center;
   font-size: 20px;
   text-transform: uppercase;
-  background: #dc4680;
-  width: 50%;
+  width: 100%;
 }
 
 .items {
@@ -34,7 +34,7 @@
 
 .status-bar {
   width: 100%;
-  height: auto;
+  height: 50px;
   padding: 8px 0;
   margin-bottom: 2px;
   text-transform: uppercase;
@@ -48,14 +48,9 @@
 }
 
 .flagofthe-country {
-  height: 200px;
+  height: 160px;
   padding: 10px;
-}
-
-.image-containter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-radius: 20px;
 }
 
 span {

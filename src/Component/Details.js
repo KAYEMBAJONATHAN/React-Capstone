@@ -6,15 +6,15 @@ import '../Style/details.css';
 const Details = () => {
   const { fName } = useParams();
 
-  const { countryData } = useSelector((state) => state.country);
-  const selectedCountry = countryData.find((item) => item.name === fName);
+  const { TheCountryData } = useSelector((state) => state.country);
+  const selectedCountry = TheCountryData.find((item) => item.name === fName);
 
   return (
     <>
       <div className="details-container">
         <div className="image-container">
+          <h1 className="header-text">{selectedCountry?.name || 'none'}</h1>
           <img src={selectedCountry.flag} alt={selectedCountry.name} className="flagofthe-country" />
-          <h1 className="heading-text">{selectedCountry?.name || 'none'}</h1>
         </div>
         <div className="status-bar">
           <h2 className="country-status">City/Town BreakDown - 2023</h2>
