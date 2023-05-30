@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Should renders correctly 1`] = `
+<div
+  className="country"
+>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      alt="back"
+      src="back.png"
+    />
+  </a>
+  <h1>
+    Countries
+  </h1>
+  <div>
+    <img
+      alt="mic"
+      src="mic.png"
+    />
+    <img
+      alt="setting"
+      src="setting.png"
+    />
+  </div>
+</div>
+`;

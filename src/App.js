@@ -1,17 +1,26 @@
-import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import Details from './Component/Details';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Home from './Component/Home';
+import { fetchCountryData } from './Redux/Country/countrySlice';
+import Details from './Component/Details';
 import Navigation from './Component/Navigation';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCountryData());
+  }, [dispatch]);
+
   return (
     <>
       <BrowserRouter>
-        <Navigation />
         <Routes>
-          <Route path="/details" element={<Details />} />
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Navigation />}>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/countries/:fName" element={<Details />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

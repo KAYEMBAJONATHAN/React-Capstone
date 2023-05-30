@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> Should renders correctly 1`] = `
+Array [
+  <div
+    className="header"
+  >
+    <img
+      alt="banner-img"
+      className="contryImg "
+      src="backround.e8e3d87f186997fd15d8.png"
+    />
+  </div>,
+  <input
+    className="SearchCountry-Here"
+    onChange={[Function]}
+    placeholder="🔍 Search Country Here"
+    type="text"
+    value=""
+  />,
+  <div
+    className="status-bar"
+  >
+    <h2
+      className="country-status"
+    >
+      Stats by Country
+    </h2>
+  </div>,
+  <div
+    className="content"
+  >
+    <a
+      className="container"
+      href="/countries/Test Country 1"
+      onClick={[Function]}
+    >
+      <img
+        alt="Test Country 1"
+        className="mapOfThe-coutry"
+        src="https://test-country-1-flag.png"
+      />
+      <div
+        className="info"
+      >
+        <h2
+          className="name"
+        >
+          Test Country 1
+        </h2>
+        <h2
+          className="population"
+        />
+      </div>
+    </a>
+    <a
+      className="container"
+      href="/countries/Test Country 2"
+      onClick={[Function]}
+    >
+      <img
+        alt="Test Country 2"
+        className="mapOfThe-coutry"
+        src="https://test-country-2-flag.png"
+      />
+      <div
+        className="info"
+      >
+        <h2
+          className="name"
+        >
+          Test Country 2
+        </h2>
+        <h2
+          className="population"
+        />
+      </div>
+    </a>
+    <a
+      className="container"
+      href="/countries/Test Country 3"
+      onClick={[Function]}
+    >
+      <img
+        alt="Test Country 3"
+        className="mapOfThe-coutry"
+        src="https://test-country-3-flag.png"
+      />
+      <div
+        className="info"
+      >
+        <h2
+          className="name"
+        >
+          Test Country 3
+        </h2>
+        <h2
+          className="population"
+        />
+      </div>
+    </a>
+  </div>,
+]
+`;
