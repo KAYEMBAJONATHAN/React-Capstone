@@ -1,15 +1,16 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { render, fireEvent, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import Home from '../Component/Home';
+import Details from '../Component/Details';
 
 jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
 }));
 
-describe('<Home />', () => {
+describe('<Details />', () => {
   const mockData = [
     { name: 'Test Country 1', flag: 'https://test-country-1-flag.png' },
     { name: 'Test Country 2', flag: 'https://test-country-2-flag.png' },
@@ -27,7 +28,7 @@ describe('<Home />', () => {
   it('Should renders correctly', () => {
     const tree = renderer.create(
       <MemoryRouter>
-        <Home />
+        <Details />
       </MemoryRouter>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -36,7 +37,7 @@ describe('<Home />', () => {
   it('Should displays all countries on load', () => {
     render(
       <MemoryRouter>
-        <Home />
+        <Details />
       </MemoryRouter>,
     );
     const countryImages = screen.getAllByRole('link', { name: /^test country/i });
@@ -46,14 +47,14 @@ describe('<Home />', () => {
   it('Should filters countries based on search', () => {
     render(
       <MemoryRouter>
-        <Home />
+        <Details />
       </MemoryRouter>,
     );
 
     const searchInput = screen.getByPlaceholderText('🔍 Search Country Here');
     fireEvent.change(searchInput, { target: { value: 'test country 2' } });
 
-    const countryImages = screen.getAllByRole('link', { name: /^test country 2/i });
+    const countryImages = screen.getAllByText(/test country 2/i);
     expect(countryImages).toHaveLength(1);
   });
 });
