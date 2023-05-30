@@ -4,13 +4,13 @@ import { useSelector } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { render, fireEvent, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import Details from '../Component/Details';
+import Home from '../Component/Home';
 
 jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
 }));
 
-describe('<Details />', () => {
+describe('<Home />', () => {
   const mockData = [
     { name: 'Test Country 1', flag: 'https://test-country-1-flag.png' },
     { name: 'Test Country 2', flag: 'https://test-country-2-flag.png' },
@@ -28,7 +28,7 @@ describe('<Details />', () => {
   it('Should renders correctly', () => {
     const tree = renderer.create(
       <MemoryRouter>
-        <Details />
+        <Home />
       </MemoryRouter>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('<Details />', () => {
   it('Should displays all countries on load', () => {
     render(
       <MemoryRouter>
-        <Details />
+        <Home />
       </MemoryRouter>,
     );
     const countryImages = screen.getAllByRole('link', { name: /^test country/i });
@@ -47,7 +47,7 @@ describe('<Details />', () => {
   it('Should filters countries based on search', () => {
     render(
       <MemoryRouter>
-        <Details />
+        <Home />
       </MemoryRouter>,
     );
 
